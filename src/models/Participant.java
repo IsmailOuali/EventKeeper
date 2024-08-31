@@ -8,13 +8,11 @@ public class Participant extends User{
     }
 
 
-    public String getName()
-    {
+    public String getName(){
         return super.getName();
     }
 
-    @Override
     public String toString(){
-        return String.format("Participant {name = "+ getName()+ "}");
+        return String.format("Participant { name = " + getName() + "}");
     } 
 }

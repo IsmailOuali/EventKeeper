@@ -9,7 +9,8 @@ public class UserService {
     private static String pass;
     private static Scanner scan = new Scanner(System.in);
 
-    /* Function that check if it's an admin */
+    /* Function that check if it's an admin by password*/
+
     public static  void checkAdmin()
     {
         System.out.println("╔══════════════════════════════════════════╗");

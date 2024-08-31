@@ -24,6 +24,7 @@ public class ParticipantService {
     }
     
     /*  Function that Display all participants */
+
     public void displayParticipant()
     {
         if(participants.isEmpty())
@@ -39,6 +40,7 @@ public class ParticipantService {
     }
     
     /*  Function that Delete a participant by name */
+
     public void deleteParticipantByName() {
         Scanner s = new Scanner(System.in);
         
@@ -57,6 +59,7 @@ public class ParticipantService {
     }
 
     /*  Function that checks if the participant exist */
+
     public static boolean getParticipantExist(String name) {
         for (Participant p : participants) {
             if (p.getName().equals(name)) {
@@ -66,11 +69,19 @@ public class ParticipantService {
         return false;
     }
     
-    /*  Function that get the object of a participant by name */
+    /*  Function that return the object of the participant that have the name*/
+
     public static Participant geParticipantByName(String name)
+
+
     {
+
+
         for (Participant participant : participants)
         {
+            
+
+
             if(participant.getName().equals(name))
             {
                 return participant;
@@ -82,6 +93,7 @@ public class ParticipantService {
     }
     
     /*  Function that count the number of participants */
+
     public static int participantCounter()
     {
         return participants.size();
@@ -90,6 +102,7 @@ public class ParticipantService {
     
     
     /*  Function that get all the participants */
+    
     public List<Participant> getParticipants() {
         return participants;
     }   

@@ -81,6 +81,7 @@ public class EventService {
 
     
     /* Functon that get the event by id */
+
     public static Event getEventById(int id) {
 
         for (Event event : events) {
@@ -93,6 +94,7 @@ public class EventService {
     }
     
     /* Function that Searches the event by location */
+
     public static Event searchEventByLocation(String searchInput)
     {
         for(Event event : events)
@@ -107,6 +109,7 @@ public class EventService {
     }
     
     /* Function that counts of the events */
+    
     public static int eventCounter()
     {
         return events.size();
