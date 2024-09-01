@@ -1,21 +1,9 @@
 package models;
 
-public class Participant {
+public class Participant extends User{
     
-    private String name;
-
-    public Participant(String name)
-    {
-        this.name = name;
+    public Participant(String name) {
+        super(name);
     }
 
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
 }
