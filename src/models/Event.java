@@ -2,7 +2,7 @@ package models;
 
 
 public class Event {
-    private static int idCounter = 0;
+    private static int idCounter = 1;
 
     private  int id;
     private String title;
@@ -13,7 +13,7 @@ public class Event {
 
     public Event(String title, String location, String date)
     {
-        this.id = idCounter++;
+        this.id = ++idCounter;
         this.title = title;
         this.location = location;
         this.date = date;

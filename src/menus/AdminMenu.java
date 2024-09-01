@@ -1,6 +1,7 @@
 package menus;
 
 import java.util.Scanner;
+import menus.EventMenu;
 
 public class AdminMenu {
 
@@ -19,8 +20,16 @@ public class AdminMenu {
             System.out.println("Your selection is: ");
     
     
-            choice = sc.nextInt();   
-            return choice;
-        
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    EventMenu.display();
+                    break;
+            
+                default:
+                    break;
+            }
+            return choice;        
     }
 }
