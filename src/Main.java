@@ -9,16 +9,15 @@ public class Main {
         int selectedChoice;
         int nextChoice;
         do {
-            
             selectedChoice = RoleMenu.display(); 
             
             switch (selectedChoice) {
                 case 1:
-                    System.out.flush();  
+                      
                     UserService.checkAdmin();
                     break;
                 case 2:
-                    System.out.flush();  
+                      
                     nextChoice = ParticipantMenu.display();
                     break;
                 default:
@@ -27,9 +26,8 @@ public class Main {
             }
         } while(selectedChoice > 2);
 
+        
     }
-
-
 
 
 }

@@ -13,8 +13,10 @@ public class UserService {
 
     public static  void checkAdmin()
     {
-        System.out.println(" | ******* Enter the admin password ******* |\n");
-        System.out.println(" | ---------------------------------------- |\n");
+        System.out.println("╔══════════════════════════════════════════╗");
+        System.out.println("║             Enter the admin password     ║");
+        System.out.println("╚══════════════════════════════════════════╝");
+        
         pass = scan.nextLine();
 
         if("root".equals(pass))
