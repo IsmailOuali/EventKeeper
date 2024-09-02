@@ -9,13 +9,17 @@ public class EventMenu {
         int choice;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\n*****Event Menu******\n");
-        System.out.println("(1) Add Event\n");
-        System.out.println("(2) Modify Event \n");
-        System.out.println("(3) Delete Event \n");
-        System.out.println("(4) Diplay all events \n");
-        System.out.println("(5) Exit \n");
-        System.out.println("**********************\n");
+        System.out.println("\n| ****** Event Menu ****** |\n");
+        System.out.println("  | (1) Add Event            |\n");
+        System.out.println("  | ------------------------ |\n");
+        System.out.println("  | (2) Modify Event         |\n");
+        System.out.println("  | ------------------------ |\n");
+        System.out.println("  | (3) Delete Event         |\n");
+        System.out.println("  | ------------------------ |\n");
+        System.out.println("  | (4) Diplay all events    |\n");
+        System.out.println("  | ------------------------ |\n");
+        System.out.println("  | (5) Exit                 |\n");
+        System.out.println("  ___________________________ \n");
         System.out.println("Your selection is: ");
 
         choice = sc.nextInt();
