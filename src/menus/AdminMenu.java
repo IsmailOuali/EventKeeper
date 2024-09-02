@@ -1,7 +1,6 @@
 package menus;
 
 import java.util.Scanner;
-import menus.EventMenu;
 
 public class AdminMenu {
 

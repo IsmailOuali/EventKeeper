@@ -9,7 +9,7 @@ public class EventMenu {
         int choice;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\n*****Participant Menu******\n");
+        System.out.println("\n*****Event Menu******\n");
         System.out.println("(1) Add Event\n");
         System.out.println("(2) Modify Event \n");
         System.out.println("(3) Delete Event \n");
@@ -22,13 +22,16 @@ public class EventMenu {
         EventMenu menu = new EventMenu();
         switch (choice) {
             case 1:
+          
                 event.addEvent();
                 menu.display();
                 break;
             case 2:
+        
                 event.displayEvents();
                 menu.display();
             case 3:
+        
                 event.displayEvents();
                 System.out.println("Select the id of the event that you want to delete");
                 int delChoice = sc.nextInt();

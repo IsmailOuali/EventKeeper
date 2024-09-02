@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EventService {
 
-    private List<Event> events = new ArrayList<>();
+    public static List<Event> events = new ArrayList<>();
 
     public void addEvent() {
         Scanner scan = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class EventService {
 
     public void displayEvents() {
         if (events.isEmpty()) {
-            System.out.println("No events available.");
+            System.out. println("No events available.");
         } else {
             for (Event event : events) {
                 System.out.println(event.toString());

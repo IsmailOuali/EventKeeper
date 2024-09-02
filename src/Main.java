@@ -1,5 +1,5 @@
 import menus.*;
-import models.*;
+import services.*;
  
 import java.util.Scanner;
 
@@ -14,9 +14,11 @@ public class Main {
             
             switch (selectedChoice) {
                 case 1:
-                    nextChoice = AdminMenu.display();
+                    System.out.flush();  
+                    UserService.checkAdmin();
                     break;
                 case 2:
+                    System.out.flush();  
                     nextChoice = ParticipantMenu.display();
                     break;
                 default:
