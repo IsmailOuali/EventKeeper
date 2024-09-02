@@ -30,6 +30,8 @@ public class AdminMenu {
                 case 1:
                     EventMenu.display();
                     break;
+                case 2:
+                    ParticipantCRUD.display();
                 case 4:
                     RoleMenu.display();
             

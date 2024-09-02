@@ -4,6 +4,17 @@ public class Participant extends User{
     
     public Participant(String name) {
         super(name);
+
     }
 
+
+    public String getName()
+    {
+        return super.getName();
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Participant {name = "+ getName()+ "}");
+    } 
 }
