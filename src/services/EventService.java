@@ -25,6 +25,27 @@ public class EventService {
         System.out.println("Event added successfully: " + event);
     }
 
+    public void updateEvent(int id)
+    {
+        Scanner scanUpdate = new Scanner(System.in);
+
+        System.out.println("Enter the new title of the event: \n");
+        String newTitle = scanUpdate.nextLine();
+        System.out.println("Enter the new location of the event: \n");
+        String newLocation = scanUpdate.nextLine();
+        System.out.println("Enter the new date of the event: \n");
+        String newDate = scanUpdate.nextLine();
+
+        for (Event eventUpdate : events)
+        {
+            eventUpdate.setTitle(newTitle);
+            eventUpdate.setLocation(newLocation);
+            eventUpdate.setDate(newDate);
+        }
+
+        System.out.println("Event updated successfully: " + events.toString());
+    }
+
     public void displayEvents() {
         if (events.isEmpty()) {
             System.out. println("No events available.");
