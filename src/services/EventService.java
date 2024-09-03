@@ -46,7 +46,7 @@ public class EventService {
         System.out.println("Event updated successfully: " + events.toString());
     }
 
-    public void displayEvents() {
+    public static void displayEvents() {
         if (events.isEmpty()) {
             System.out. println("No events available.");
         } else {

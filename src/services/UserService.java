@@ -1,5 +1,4 @@
 package services;
-import models.User;
 import java.util.Scanner;
 
 import menus.AdminMenu;

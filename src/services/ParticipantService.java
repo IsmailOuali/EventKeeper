@@ -1,5 +1,4 @@
 package services;
-import models.Event;
 import models.Participant;
 import java.util.List;
 import java.util.ArrayList;
