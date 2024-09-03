@@ -67,6 +67,17 @@ public class EventService {
         System.out.println("Event with ID " + id + "not found");
     }
 
+    public static Event getEventById(int id) {
+
+        for (Event event : events) {
+            if (event.getId() == id) {
+                return event;
+            }
+        }
+        System.out.println("No event found with id= "+ id);
+        return null;
+    }
+
     
     public List<Event> getEvents() {
         return events;

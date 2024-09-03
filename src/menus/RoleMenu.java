@@ -28,8 +28,9 @@ public class RoleMenu {
                     UserService.checkAdmin();
                     break;
                 case 2:
-                      
-                     ParticipantMenu.display();
+                    
+                    ParticipantMenu.participantName();
+                     
                     break;
                 default:
                     System.out.println("Invalid choice number");

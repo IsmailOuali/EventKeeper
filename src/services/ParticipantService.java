@@ -52,6 +52,29 @@ public class ParticipantService {
         System.out.println("Participant with name " + name + "not found");
     }
 
+    public static boolean getParticipantExist(String name) {
+        for (Participant p : participants) {
+            if (p.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Participant geParticipantByName(String name)
+    {
+        for (Participant participant : participants)
+        {
+            if(participant.getName().equals(name))
+            {
+                return participant;
+            }
+
+        }
+        System.out.println("No participant found with name= "+ name);
+        return null;
+    }
+
     public List<Participant> getParticipants() {
         return participants;
     }   
