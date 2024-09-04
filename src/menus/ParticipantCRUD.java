@@ -42,7 +42,7 @@ public class ParticipantCRUD {
                 ParticipantCRUD.display();
                 break;
             case 4:
-                RoleMenu.display();
+                AdminMenu.display();
                 break;
         }
 

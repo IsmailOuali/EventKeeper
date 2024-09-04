@@ -61,10 +61,10 @@ public class Event {
     }
 
     public String toString() {
-        return "Event{" + "id='" + id + '\'' +
-                "title='" + title + '\'' +
-                ", location='" + location + '\'' +
-                ", date='" + date + '\'' +
+        return "Event{" + "id = " + id  +
+                ", title = " + title + 
+                ", location = " + location +
+                ", date = " + date + 
                 '}';
     }
 

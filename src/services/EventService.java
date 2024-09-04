@@ -78,6 +78,24 @@ public class EventService {
         return null;
     }
 
+    public static Event searchEventByLocation(String searchInput)
+    {
+        for(Event event : events)
+        {
+            if(event.getLocation().contains(searchInput))
+            {
+                return event;
+            }
+        }
+        return null;
+        
+    }
+
+    public static int eventCounter()
+    {
+        return events.size();
+    }
+
     
     public List<Event> getEvents() {
         return events;

@@ -32,7 +32,9 @@ public class ParticipantMenu {
         System.out.println("║──────────────────────────────────────║");
         System.out.println("║ 4. Search events by location         ║");
         System.out.println("║──────────────────────────────────────║");
-        System.out.println("║ 5. Exit                              ║");
+        System.out.println("║ 5. Unsubscribe from an event         ║");
+        System.out.println("║──────────────────────────────────────║");
+        System.out.println("║ 6. Exit                              ║");
         System.out.println("╚══════════════════════════════════════╝");
         
         System.out.println("Your selection is: ");
@@ -44,14 +46,37 @@ public class ParticipantMenu {
                 EventService.displayEvents();
                 ParticipantMenu.display();
                 break;
-                case 2:
+            case 2:
                 ParticipantMenu.inscripeEvent();
                 ParticipantMenu.display();
+                break;
                 
-                case 3:
+            case 3:
                 ParticipantMenu.displayParticipantIns(getParticipantName());
                 ParticipantMenu.display();
+                break;
+            
+            case 4:
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Enter The name of the location you want: \n");
+                String searchInput = scan.nextLine();
+                System.out.println(EventService.searchEventByLocation(searchInput));
+                ParticipantMenu.display(); 
+                break;
+
             case 5:
+                Scanner scanner = new Scanner(System.in);
+
+                ParticipantMenu.displayInscriptions();
+                System.out.println("Enter the id of the event that you want to unsubscribe: \n");
+
+                int choix = scanner.nextInt();
+                ParticipantMenu.deleteInscription(choix);
+                System.out.println("Your Inscription with id " + choix + " is Deleted Successfully");
+                ParticipantMenu.display();
+                break;
+
+            case 6:
                 RoleMenu.display();
             default:
                 break;
@@ -119,6 +144,11 @@ public class ParticipantMenu {
 
 
        
+    }
+
+    public static int inscriptionCount()
+    {
+        return inscriptions.size();
     }
 
     public static void displayInscriptions()

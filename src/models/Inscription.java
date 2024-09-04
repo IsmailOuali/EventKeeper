@@ -36,6 +36,6 @@ public class Inscription {
 
     public String toString()
     {
-        return "Inscription{ id= "+ id + "Event= "+ event.getTitle() + '\'' + "Participant= " + participant.getName() + '}';
+        return "Inscription{ id= "+ id + "Event =  " + event.getTitle() + " ,   Participant =   " + participant.getName() +   '}';
     }
 }

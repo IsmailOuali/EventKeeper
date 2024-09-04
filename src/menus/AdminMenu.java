@@ -2,6 +2,9 @@ package menus;
 
 import java.util.Scanner;
 
+import services.EventService;
+import services.ParticipantService;
+
 public class AdminMenu {
 
     public static int display()
@@ -19,7 +22,9 @@ public class AdminMenu {
             System.out.println("║──────────────────────────────────║");
             System.out.println("║ 3. Show all inscriptions         ║");
             System.out.println("║──────────────────────────────────║");
-            System.out.println("║ 4. Exit                          ║");
+            System.out.println("║ 4. Statistics                    ║");
+            System.out.println("║──────────────────────────────────║");
+            System.out.println("║ 5. Exit                          ║");
             System.out.println("╚══════════════════════════════════╝");
             System.out.println("Your selection is: ");
     
@@ -32,9 +37,18 @@ public class AdminMenu {
                     break;
                 case 2:
                     ParticipantCRUD.display();
+                    break;
+                
                 case 4:
+                    System.out.printf(" Number of participants: { %d }\n" , ParticipantService.participantCounter());
+                    System.out.printf(" Number of events: { %d }\n" , EventService.eventCounter());
+                    System.out.printf(" Number of inscriptions: { %d }\n" , ParticipantMenu.inscriptionCount());
+                    AdminMenu.display();
+                    break;
+
+                case 5:
                     RoleMenu.display();
-            
+                    break;
                 default:
                     break;
             }

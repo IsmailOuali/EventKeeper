@@ -75,6 +75,13 @@ public class ParticipantService {
         return null;
     }
 
+    public static int participantCounter()
+    {
+        return participants.size();
+    }
+
+
+
     public List<Participant> getParticipants() {
         return participants;
     }   
