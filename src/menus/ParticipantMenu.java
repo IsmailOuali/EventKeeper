@@ -41,6 +41,8 @@ public class ParticipantMenu {
 
         choice = sc.nextInt();
 
+        /* Displaying of Participant Menu with choices */
+
         switch (choice) {
             case 1:
                 EventService.displayEvents();
@@ -85,6 +87,8 @@ public class ParticipantMenu {
         
     }
 
+    /* Function to check the exestince of a Participant and get his name */
+
     public static String getParticipantName()
     {
         Scanner scan = new Scanner(System.in);
@@ -120,6 +124,9 @@ public class ParticipantMenu {
 
     }
 
+
+    /* Function that Inscripe a Participant in an Event */
+
     public static void inscripeEvent()
     {
         Scanner sc = new Scanner(System.in);
@@ -146,11 +153,17 @@ public class ParticipantMenu {
        
     }
 
+    /* Function to count the number of inscriptions */
+    
     public static int inscriptionCount()
     {
         return inscriptions.size();
     }
 
+
+    
+    /* Function thet displays the inscriptions */
+    
     public static void displayInscriptions()
     {
         if (inscriptions.isEmpty()) {
@@ -162,6 +175,9 @@ public class ParticipantMenu {
             }
         }
     }
+    
+
+    /* Function thet displays the inscriptions Of a Participant */
 
     public static void displayParticipantIns(String name)
     {
@@ -187,6 +203,8 @@ public class ParticipantMenu {
         }
         
     }
+
+    /* Function that delete the inscriptions */
 
     public static void deleteInscription(int id)
     {

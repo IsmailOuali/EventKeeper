@@ -10,6 +10,8 @@ public class ParticipantService {
     public static List<Participant> participants = new ArrayList<>();
 
 
+    /*  Function that add a participant */
+    
     public void addParticipant(){
 
         Scanner scan = new Scanner(System.in);
@@ -20,7 +22,8 @@ public class ParticipantService {
         participants.add(participant);
         System.out.println("The Participant is added Succesfully: \n"+ participants);
     }
-
+    
+    /*  Function that Display all participants */
     public void displayParticipant()
     {
         if(participants.isEmpty())
@@ -32,12 +35,13 @@ public class ParticipantService {
                 System.out.println(participant.getName());
             }
         }
-
+        
     }
-
-       public void deleteParticipantByName() {
+    
+    /*  Function that Delete a participant by name */
+    public void deleteParticipantByName() {
         Scanner s = new Scanner(System.in);
-
+        
         System.out.println("Enter the name of Participant to delete: \n");
         String name = s.nextLine();
 
@@ -52,6 +56,7 @@ public class ParticipantService {
         System.out.println("Participant with name " + name + "not found");
     }
 
+    /*  Function that checks if the participant exist */
     public static boolean getParticipantExist(String name) {
         for (Participant p : participants) {
             if (p.getName().equals(name)) {
@@ -60,7 +65,8 @@ public class ParticipantService {
         }
         return false;
     }
-
+    
+    /*  Function that get the object of a participant by name */
     public static Participant geParticipantByName(String name)
     {
         for (Participant participant : participants)
@@ -69,19 +75,21 @@ public class ParticipantService {
             {
                 return participant;
             }
-
+            
         }
         System.out.println("No participant found with name= "+ name);
         return null;
     }
-
+    
+    /*  Function that count the number of participants */
     public static int participantCounter()
     {
         return participants.size();
     }
-
-
-
+    
+    
+    
+    /*  Function that get all the participants */
     public List<Participant> getParticipants() {
         return participants;
     }   
