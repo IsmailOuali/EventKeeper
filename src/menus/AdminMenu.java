@@ -39,6 +39,10 @@ public class AdminMenu {
                     ParticipantCRUD.display();
                     break;
                 
+                case 3:
+                    ParticipantMenu.displayInscriptions();
+                    AdminMenu.display();
+                    break;
                 case 4:
                     System.out.printf(" Number of participants: { %d }\n" , ParticipantService.participantCounter());
                     System.out.printf(" Number of events: { %d }\n" , EventService.eventCounter());
